@@ -1,0 +1,77 @@
+@import './utils/variables.css';
+
+.header {
+  padding: 1.5rem 0.15rem;
+  text-align: center;
+}
+
+.logo img {
+  max-width: 280px;
+}
+
+.container {
+  padding: 0 1rem;
+  background-size: cover;
+  min-height: 100vh;
+  z-index: 10;
+}
+
+.container:before {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(#f1f1f1, 0.65);
+}
+
+.content {
+  z-index: 100;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 9rem;
+}
+
+.charts {
+  width: 100%;
+}
+
+@media (--desktop) {
+  .container {
+    padding: 0;
+  }
+}
+
+/* charts */
+.charts {
+  margin-top: 3rem;
+}
+
+@media (--desktop) {
+  .charts {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+}
+
+.chart {
+  background-color: rgba(#fff, 0.75);
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+}
